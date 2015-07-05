@@ -168,7 +168,9 @@ public class SingleAttachmentControl extends Control implements
 				// error with server
 				log.error("Error sending data to client (" + filename + ")", e);
 			} finally {
-				in.close();
+				if(in != null)
+					in.close();
+				
 				out.flush();
 				out.close();
 			}

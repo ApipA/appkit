@@ -143,10 +143,7 @@ public class ClusterNode implements INode {
 			return false;
 		}
 		ClusterNode cn = (ClusterNode)n;
-		if (nodeAddress == null && cn.nodeAddress != null) {
-			return false;
-		}
-		if (nodeAddress == null && cn.nodeAddress == null) {
+		if (nodeAddress == null || cn.nodeAddress == null) {
 			// return FALSE! Both nodes can not be identified..
 			return false;
 		}
