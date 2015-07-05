@@ -551,8 +551,8 @@ public class EntityTableViewer extends ControlContainer implements IEnhancedTabl
 							column = (ListColumn) iter.next();
 						}
 
-						colText = getResString(column.getFinalProperty());
 						if (column != null) {
+							colText = getResString(column.getFinalProperty());
 							if (null != column.getTitleId() && !"".equals(column.getTitleId())) {
 								colText = bundle.getString(column.getTitleId());
 							}
